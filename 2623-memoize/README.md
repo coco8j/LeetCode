@@ -72,3 +72,21 @@ values = [[5],[]]
 	<li><code>actions[i]</code> is one of &quot;call&quot; and &quot;getCallCount&quot;</li>
 	<li><code>fnName</code> is one of &quot;sum&quot;, &quot;factorial&quot; and&nbsp;&quot;fib&quot;</li>
 </ul>
+### 의사코드 .
+*해당 문제는 'Memoization' 관련이다. 
+
+1. 순회 가능한 빈 스토리지(캐싱)를 만들어준다.
+2. memoize 함수는 다음 '함수'를 반환한다. 
+	2-1. memoize를 정의한 변수명에 부여된 인자를 args로 잡는다.
+	2-2. 스토리지내에 'Key = args : Value =  memoize에 들어오는 인자(함수)에 args를 인수로 넣어준 함수 실행' 형태로  저장해준다.
+				storage[args] = fn(...args)
+	2-3. 이후 저장소 내에 args를 확인하고 있으면 해당 키값에 대한 밸류 값을 반환. 
+	2-4. args가 없을 경우에는 함수를 실행하고 해당 내용을 스토리지에 저장한다. 
+	2-5. //getCallCount 
+			 args의 길이가 0일 경우, 스토리지내에 저장된 key의 값을 세서 반환한다. 
+ 
+### 노트 사항
+1. 스토리지는 [ ] 배열타입으로 순회 가능하게 해줘야한다. (굳이 오브젝트 타입 { } 이 아니어도 괜찮다.)
+2. 리턴시킬 함수의 인자값으로 전개연산자를 사용한다. 
+3. getCallCount는 해당 문제 한정이다.  
+4. 해당 함수실행이 실행되었는지 확인하기 위해서 if( !storage[args] ) 방법이 아닌 if ( storage[args] === undefined ) 방법으로 사용해서 인자가 0일 경우도 카운트 되게 한다.
