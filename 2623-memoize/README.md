@@ -72,6 +72,8 @@ values = [[5],[]]
 	<li><code>actions[i]</code> is one of &quot;call&quot; and &quot;getCallCount&quot;</li>
 	<li><code>fnName</code> is one of &quot;sum&quot;, &quot;factorial&quot; and&nbsp;&quot;fib&quot;</li>
 </ul>
+
+
 ### 의사코드 .
 *해당 문제는 'Memoization' 관련이다. 
 
