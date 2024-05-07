@@ -52,7 +52,9 @@ The composition of zero functions is the identity function</pre>
 
 <h2>의사코드</h2> 
 <br>
-<p> **< 문제 포인트 >**
+<p> 
+	
+**< 문제 포인트 >**
 배열의 각 함수가 하나의 정수를 입력으로 받아들이고 하나의 정수를 출력으로 반환한다고 가정할 수 있습니다.
 
 **<요약>**
