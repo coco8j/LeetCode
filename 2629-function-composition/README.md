@@ -48,3 +48,22 @@ The composition of zero functions is the identity function</pre>
 	<li><code><font face="monospace">0 &lt;= functions.length &lt;= 1000</font></code></li>
 	<li>all functions accept and return a single integer</li>
 </ul>
+
+
+<p>의사코드
+**< 문제 포인트 >**
+배열의 각 함수가 하나의 정수를 입력으로 받아들이고 하나의 정수를 출력으로 반환한다고 가정할 수 있습니다.
+
+**<요약>**
+인자를 받아 함수들 배열의 뒤에서부터 진행되는 함수를 반환
+
+**<수도코드>**
+1. 배열의 뒷번호부터 순회하며 함수를 하나씩 꺼냅니다. 
+2. 받은 인자를 넣어 실행 후, result에 할당합니다. 
+3. 다음 반복에는 result값을 넣어 실행합니다. 
+4. 반복이 끝나면 최종 재할당을 마친 result를 반환합니다. 
+
+
+Lodash.compose와 비슷함
+
+</p>
