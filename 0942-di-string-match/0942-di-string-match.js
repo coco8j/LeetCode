@@ -7,17 +7,20 @@
  * @return {number[]}
  */
 var diStringMatch = function (s) {
-  let count1 = -1;
-  let count2 = s.length + 1;
-  const result = [];
-  for (let i = 0; i <= s.length; i++) {
-    if (s[i] === "I") {
-      count1 = count1 + 1;
-      result.push(count1);
-    } else {
-      count2 = count2 - 1;
-      result.push(count2);
+    const n = s.length;
+    let low = 0, high = n;
+    const result = [];
+
+    for (let i = 0; i < n; i++) {
+        if (s[i] === 'I') {
+            result.push(low);
+            low++;
+        } else {
+            result.push(high);
+            high--;
+        }
     }
-  }
-  return result;
+
+    result.push(low);
+    return result;
 };
