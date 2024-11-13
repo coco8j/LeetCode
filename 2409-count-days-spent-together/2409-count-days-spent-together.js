@@ -27,7 +27,7 @@ var countDaysTogether = function (arriveAlice, leaveAlice, arriveBob, leaveBob) 
     const maxArrival = aliceArrive >= bobArrive ? aliceArrive : bobArrive;
     const minLeave = aliceLeave <= bobLeave ? aliceLeave : bobLeave;
 
-    return (maxArrival >= minLeave) ? 0 : minLeave - maxArrival + 1;
+    return (maxArrival > minLeave) ? 0 : minLeave - maxArrival + 1;
 };
 
 function format(string) {
